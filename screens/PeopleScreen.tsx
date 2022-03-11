@@ -1,19 +1,25 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import PeopleInfo from '../components/People';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function PeopleScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+      <PeopleInfo />
   );
 }
-
+const getMovies = async () => {
+  try {
+   const response = await fetch('https://reactnative.dev/movies.json');
+   const json = await response.json();
+   setData(json.movies);
+ } catch (error) {
+   console.error(error);
+ } finally {
+   setLoading(false);
+ }
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
