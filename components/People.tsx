@@ -56,10 +56,7 @@ export default function People() {
   }
   function loadMoredata() {
 
-        console.log(data=(props)=>{props.ne
 
-
-        })
 
   }
   return (
@@ -76,8 +73,8 @@ export default function People() {
         data={data}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity key={item} style={styles.row} onPress={() => actionOnRow(item)}>
-              <Image style={styles.image} source={require('../assets/images/avatar.jpg')}></Image>
+            <TouchableOpacity key={item.name} style={styles.row} onPress={() => actionOnRow(item)}>
+              <Image style={styles.image} source={require('../assets/images/avatar.png')}></Image>
               <Text style={styles.rowTitle}>{item.name}</Text>
             </TouchableOpacity>
           )
@@ -90,7 +87,7 @@ export default function People() {
         ]}
         onScroll={onScroll}
         onResponderRelease={onRelease}
-        onEndReached={loadMoredata({data.next})}
+        onEndReached={loadMoredata}
         onEndReachedThreshold={0}
         ListHeaderComponent={(
           <View style={{
@@ -131,7 +128,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 5,
     borderBottomColor: 'black',
-  backgroundColor: '#ffc266',
+  backgroundColor: '#99d6ff',
     margin: 3,
     borderRadius: 5,
   },
@@ -139,6 +136,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
+    color:'#6666ff'
 
   },
   lottieView: {

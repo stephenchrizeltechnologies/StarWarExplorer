@@ -44,7 +44,7 @@ function RootNavigator() {
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="PeopleDetail" component={PeopleDetail} />
-      <Stack.Screen name="MovieDetail" component={MovieDetail} />
+      <Stack.Screen name="MovieDetail" component={MovieDetail} options={{ title: 'Movie Detail' }}/>
 
       
       <Stack.Group screenOptions={{ presentation: 'modal' }}>

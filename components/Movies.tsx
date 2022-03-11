@@ -33,7 +33,6 @@ export default function Movies() {
     getMovies();
   }, []);
   function actionOnRow(item) {
-    console.log(item);
     navigation.navigate('MovieDetail', { item })
   }
 
@@ -45,8 +44,8 @@ export default function Movies() {
             data={data}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity key={item} style={styles.row} onPress={() => actionOnRow(item)}>
-                 <Image style={styles.image} source={require('../assets/images/avatar.jpg')}></Image>
+                <TouchableOpacity  key={item} style={styles.row} onPress={() => actionOnRow(item)}>
+                 <Image style={styles.image} source={require('../assets/images/avatar.png')}></Image>
                   <Text style={styles.rowTitle}>{item.title}</Text>
                   {/* <Text >{item.name}</Text> */}
 
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 5,
     borderBottomColor: 'black',
-  backgroundColor: '#ffc266',
+  backgroundColor: '#99d6ff',
     margin: 3,
     borderRadius: 5,
   },
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-
+    color:'#6666ff'
   },
  
   coverImage: {

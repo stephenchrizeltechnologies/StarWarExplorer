@@ -1,15 +1,8 @@
-import * as WebBrowser from 'expo-web-browser';
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, TouchableOpacity, ActivityIndicator, FlatList } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
-
 export default function MovieDetail(props) {
-
-    console.log('Selected Item :', props);
-
+console.log(props.route.params);
     props.navigation.setOptions({ title: props.route.params.item.name });
 
     return (
