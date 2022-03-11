@@ -1,5 +1,7 @@
 # StarWarExplorer
 ![splah](https://user-images.githubusercontent.com/86555484/157870625-6e88cf64-be98-4ed9-8ec9-9066b6cb22be.png)
+![People](https://user-images.githubusercontent.com/86555484/157873010-fc867b39-cf3a-4e90-bde2-155bc705709e.png)
+
 
 
 
